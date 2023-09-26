@@ -1,0 +1,35 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header h1{
+    transition: transform 250ms;
+
+}
+.header h1:hover{
+    transform: translateY(-10px);
+}
+.lista-elementos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+}
+.lista-elementos li {
+    display: block;
+    text-transform: uppercase;
+    background-color:blue;
+    padding: 10px;
+    color: #FFF;
+}
+.lista-elementos li.active{
+    background-color: red;
+}
+li a{
+    text-decoration: none;
+    color: #FFF;
+}
+a:hover{
+    color:#000
+}

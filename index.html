@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="header">
+        <h1>HOLA</h1>
+        <ul class="lista-elementos" id="myList" onclick="obtener()">
+            <li class="element active"><a href="#">Inicio</a></li>
+            <li class="element"><a href="#first">Sobre nosotros</a></li>
+            <li class="element"><a href="#third">Contacto</a></li>
+        </ul>
+    </div>
+    <div class="main">
+        <section id="first">
+            <h2>Primera seccion</h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae suscipit sed a dolor assumenda soluta
+            deserunt quas, ad quod earum tempora similique aut provident laboriosam architecto. Cumque sunt fugit, ipsa
+            quasi laudantium iure aliquam animi beatae dolorem ut veniam vel vero sed veritatis dolorum fuga totam autem
+            error maxime, quae odio, saepe excepturi? At dolorem, error perferendis velit quod beatae eum, expedita
+            optio ipsam fugiat voluptatem harum architecto aliquam delectus, rerum aperiam veritatis repudiandae nobis
+            dolore eaque. Quasi sint blanditiis aut, ducimus provident, aliquam recusandae animi possimus repellat non
+            officia temporibus aperiam! Dignissimos quo expedita nemo, atque eveniet reprehenderit quas.
+        </section>
+        <section id="second">
+            <h2>Segunda seccion</h2>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste, exercitationem nobis expedita vero nam odit
+            cupiditate error laudantium minus iure modi nesciunt repellendus assumenda dicta ipsa suscipit aspernatur ut
+            blanditiis praesentium nihil sunt reiciendis pariatur architecto dolorum. Obcaecati harum cum ullam
+            architecto eveniet aspernatur doloribus laudantium consectetur tenetur ipsa minima nesciunt, culpa aliquam
+            esse consequatur recusandae? Harum culpa laboriosam, repellat repellendus molestiae nam eaque aliquid
+            tempore ex. Possimus quibusdam aperiam voluptatum, magni cum ratione, temporibus voluptates architecto,
+            veritatis obcaecati accusantium reiciendis nemo. Illo placeat, ea mollitia, sunt maiores esse aliquam aut
+            perspiciatis at laboriosam corporis magni soluta voluptates minima dicta!
+        </section>
+        <section id="third">
+            <h2>Tercera seccion</h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore fugiat in nemo dolorum ab quia praesentium
+            voluptatem nulla mollitia illo quaerat iure sed voluptate sit non est vitae at minus quisquam, dignissimos
+            alias. Tempora, autem unde? Tempora ducimus quos in, ad ut cumque officia iure possimus reiciendis at,
+            explicabo quis, fugiat fuga praesentium. Molestias corrupti recusandae numquam quia, ut beatae sed illo
+            ducimus quis odit consectetur alias quae ratione repellat veniam fugit, temporibus id enim provident autem
+            ea totam dolorum pariatur. Impedit maxime distinctio voluptatum, quam animi veritatis. Doloribus perferendis
+            quo vitae eos voluptatibus est aliquid voluptatum velit nulla eveniet!
+        </section>
+    </div>
+    <script>
+        function obtener() {
+            document.querySelectorAll(".element").forEach((ele) =>
+                ele.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    document.querySelectorAll(".element").forEach((ele) =>
+                        ele.classList.remove("active")
+                    );
+                    //this.classList.add("active")
+                    ele.classList.add("active")
+
+                })
+            );
+            /*let container = document.getElementById("myList")
+            let btns = container.getElementsByClassName("element")
+            for(var i=0;i<btns.length;i++){
+                btns[i].addEventListener("click", function() {
+                    var current = document.getElementsByClassName("active")
+                    current[0].className = current[0].className.replace(" active", "");
+                    this.className += " active";
+                })
+            }*/
+            //console.log("Hola",e)
+        }
+    </script>
+</body>
+
+</html>
